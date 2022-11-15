@@ -37,7 +37,7 @@ class Book(Library):
         return('Biblioteka ' + self.library + ' data publikacji ' + self.publication_date + ' autor ' + self.author_name + ' ' + self.author_surname + 'liczba stron' + self.number_of_pages)
 
 class Order(Book):
-    def __init__(self, employee, student,books: list (Book), order_date):
+    def __init__(self, employee, student,books: Book, order_date):
         self.employee = employee
         self.student = student
         self.books = books
