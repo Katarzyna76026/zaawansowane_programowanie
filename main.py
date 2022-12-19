@@ -3,9 +3,9 @@ import matplotlib.pyplot as plt
 import cvlib
 from cvlib.object_detection import draw_bbox
 
-img1 = cv2.imread('C:/Users/Huawei/PycharmProjects/LiczenieLudzi/img1.png')
-img2 = cv2.imread('C:/Users/Huawei/PycharmProjects/LiczenieLudzi/img2.png')
-img3 = cv2.imread('C:/Users/Huawei/PycharmProjects/LiczenieLudzi/img3.png')
+img1 = cv2.imread('C:/Users/Huawei/PycharmProjects/LiczenieLudzi/ZaawansowaneProgramowanie/img.png')
+img2 = cv2.imread('C:/Users/Huawei/PycharmProjects/LiczenieLudzi/ZaawansowaneProgramowanie/img2.png')
+img3 = cv2.imread('C:/Users/Huawei/PycharmProjects/LiczenieLudzi/ZaawansowaneProgramowanie/img3.png')
 
 img1_cvtClolor = cv2.cvtColor(img1,cv2.COLOR_BGR2RGB)
 img2_cvtClolor = cv2.cvtColor(img2,cv2.COLOR_BGR2RGB)
