@@ -3,9 +3,9 @@ import matplotlib.pyplot as plt
 import cvlib
 from cvlib.object_detection import draw_bbox
 
-img1 = cv2.imread('C:/Users/Huawei/PycharmProjects/LiczenieLudzi/ZaawansowaneProgramowanie/img.png')
-img2 = cv2.imread('C:/Users/Huawei/PycharmProjects/LiczenieLudzi/ZaawansowaneProgramowanie/img2.png')
-img3 = cv2.imread('C:/Users/Huawei/PycharmProjects/LiczenieLudzi/ZaawansowaneProgramowanie/img3.png')
+img1 = cv2.imread('img.png')
+img2 = cv2.imread('img2.png')
+img3 = cv2.imread('img3.png')
 
 images = [img1, img2, img3]
 
