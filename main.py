@@ -1,16 +1,19 @@
+import time
 import cv2
 import matplotlib.pyplot as plt
 import cvlib
 from cvlib.object_detection import draw_bbox
 
-img1 = cv2.imread('img.png')
-img2 = cv2.imread('img2.png')
-img3 = cv2.imread('img3.png')
 
-images = [img1, img2, img3]
+images = []
+for i in range (3):
+    photo = input()
+    img = cv2.imread(str(photo))
+    images.append(photo)
 
-for img in images:
-    img_cvtColor = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
+for image in images:
+    startTime = time.time()
+    img = cv2.imread(image)
     box, label, count = cvlib.detect_common_objects(img)
     output = draw_bbox(img,box, label,count)
     output = cv2.cvtColor(output,cv2.COLOR_BGR2RGB)
@@ -18,5 +21,6 @@ for img in images:
     plt.axis("off")
     plt.imshow(output)
     plt.show()
-    print("Na zdjęciu jest " + str(len(label)) + " ludzi")
-
+    stopTime = time.time()
+    duration = stopTime - startTime
+    print("Na zdjęciu jest " + str(len(label)) + " ludzi. Analiza trwała " + str(duration) + " sekund")
